@@ -31,7 +31,7 @@
     "watch": "vite build --watch",
     "lint": "eslint src/**/*.{ts,js} --fix",
     "build": "pnpm type-check && vite build",
-    "release": "pnpm build && bumpp package.json --commit \"[release] v\" --push --tag && pnpm release"
+    "release": "pnpm build && bumpp package.json --commit \"[release] v\" --push --tag && pnpm publish"
   },
   "keywords": [
     "youcan",
