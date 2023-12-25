@@ -1,6 +1,6 @@
 {
   "name": "@youcan/qantra",
-  "version": "0.1.0",
+  "version": "1.0.0-beta.0",
   "description": "YouCan's bridge for building embedded apps",
   "exports": {
     ".": {
@@ -31,7 +31,8 @@
     "watch": "vite build --watch",
     "lint": "eslint src/**/*.{ts,js} --fix",
     "build": "pnpm type-check && vite build",
-    "release": "pnpm build && bumpp package.json --commit \"[release] v\" --push --tag && pnpm release"  },
+    "release": "pnpm build && bumpp package.json --commit \"[release] v\" --push --tag && pnpm release"
+  },
   "keywords": [
     "youcan",
     "qantra",
