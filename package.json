@@ -1,0 +1,52 @@
+{
+  "name": "@youcan/qantra",
+  "version": "1.0.0",
+  "description": "YouCan's bridge for building embedded apps",
+  "exports": {
+    ".": {
+      "require": {
+        "default": "./dist/index.umd.js",
+        "types": "./dist/types/index.d.ts"
+      },
+      "import": {
+        "default": "./dist/index.es.js",
+        "types": "./dist/types/index.d.ts"
+      }
+    },
+    "./style": {
+      "require": "./dist/index.css",
+      "import": "./dist/index.css"
+    }
+  },
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite dev",
+    "type-check": "tsc",
+    "watch": "vite build --watch",
+    "lint": "eslint src/**/*.{ts,js} --fix",
+    "build": "pnpm type-check && vite build",
+    "release": "pnpm build && bumpp package.json --commit \"[release] v\" --push --tag && pnpm release"  },
+  "keywords": [
+    "youcan",
+    "qantra",
+    "bridge",
+    "app"
+  ],
+  "author": "YouCan",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@youcan/eslint-config": "^2.4.13",
+    "bumpp": "^9.2.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vite-plugin-dts": "^3.6.4"
+  }
+}
