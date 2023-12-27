@@ -1,3 +1,4 @@
+import type { ResourcePickerOptions } from './types';
 import { dispatch, subscribe } from './comms';
 
 export function sessionToken(): Promise<string> {
@@ -10,4 +11,10 @@ export function sessionToken(): Promise<string> {
 
 export function redirect(url: string): void {
   dispatch('QANTRA::NAV.REDIRECT.REMOTE', url);
+}
+
+export function resourcePicker({
+  type,
+}: ResourcePickerOptions): void {
+  dispatch('QANTRA::RESOURCE_PICKER.REQ', type);
 }
