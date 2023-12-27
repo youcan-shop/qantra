@@ -11,9 +11,9 @@ interface BaseResource {
   thumbnailUrl?: string
 }
 
-export interface Variant extends BaseResource {}
+interface Variant extends BaseResource {}
 
-export interface Resource extends BaseResource {
+interface Resource extends BaseResource {
   variants?: Variant[]
 }
 
