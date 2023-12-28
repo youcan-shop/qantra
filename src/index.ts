@@ -1,4 +1,4 @@
-import type { ResourcePickerOptions } from './types';
+import type { Resource, ResourcePickerOptions } from './types';
 import { dispatch, subscribe } from './comms';
 
 export function sessionToken(): Promise<string> {
@@ -15,6 +15,10 @@ export function redirect(url: string): void {
 
 export function resourcePicker({
   type,
-}: ResourcePickerOptions): void {
-  dispatch('QANTRA::RESOURCE_PICKER.REQ', type);
+}: ResourcePickerOptions): Promise<Resource[]> {
+  return new Promise((resolve) => {
+    subscribe('QANTRA::RESOURCE_PICKER.RES', resources => resolve(resources));
+
+    dispatch('QANTRA::RESOURCE_PICKER.REQ', type);
+  });
 }
