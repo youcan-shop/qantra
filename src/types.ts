@@ -13,7 +13,7 @@ interface BaseResource {
 
 interface Variant extends BaseResource {}
 
-interface Resource extends BaseResource {
+export interface Resource extends BaseResource {
   variants?: Variant[]
 }
 
@@ -24,7 +24,7 @@ export interface QantraMessagePayloadMap {
   'QANTRA::NAV.REDIRECT.REMOTE': [string]
 
   'QANTRA::RESOURCE_PICKER.REQ': [ResourcePickerType]
-  'QANTRA::RESOURCE_PICKER.RES': [Resource]
+  'QANTRA::RESOURCE_PICKER.RES': [Resource[]]
 }
 
 export type QantraMessageType = keyof QantraMessagePayloadMap;
