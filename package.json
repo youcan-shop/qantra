@@ -1,6 +1,6 @@
 {
   "name": "@youcan/qantra",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "YouCan's bridge for building embedded apps",
   "exports": {
     ".": {
