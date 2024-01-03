@@ -1,4 +1,4 @@
-import type { Resource, ResourcePickerOptions } from './types';
+import type { Resource, ResourcePickerOptions, ToastOptions } from './types';
 import { dispatch, subscribe } from './comms';
 
 export function sessionToken(): Promise<string> {
@@ -22,3 +22,9 @@ export function resourcePicker({
     dispatch('QANTRA::RESOURCE_PICKER.REQ', type);
   });
 }
+
+export const toast = {
+  show: (options: ToastOptions) => {
+    dispatch('QANTRA::TOAST.REQ', options);
+  },
+};

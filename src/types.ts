@@ -17,6 +17,17 @@ export interface Resource extends BaseResource {
   variants?: Variant[]
 }
 
+type AlertType = 'warning' | 'success' | 'info' | 'error';
+type ToastPosition = 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+export interface ToastOptions {
+  title: string
+  description: string
+  position: ToastPosition
+  type: AlertType
+  closeAfterDuration: number
+  canClose: boolean
+}
+
 export interface QantraMessagePayloadMap {
   'QANTRA::SESSION_TOKEN.REQ': []
   'QANTRA::SESSION_TOKEN.RES': [string]
@@ -25,6 +36,8 @@ export interface QantraMessagePayloadMap {
 
   'QANTRA::RESOURCE_PICKER.REQ': [ResourcePickerType]
   'QANTRA::RESOURCE_PICKER.RES': [Resource[]]
+
+  'QANTRA::TOAST.REQ': [ToastOptions]
 }
 
 export type QantraMessageType = keyof QantraMessagePayloadMap;
