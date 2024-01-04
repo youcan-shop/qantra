@@ -22,10 +22,10 @@ type ToastPosition = 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
 export interface ToastOptions {
   title: string
   description: string
-  position: ToastPosition
-  type: AlertType
-  closeAfterDuration: number
-  canClose: boolean
+  position?: ToastPosition
+  type?: AlertType
+  closeAfterDuration?: number
+  canClose?: boolean
 }
 
 export interface QantraMessagePayloadMap {
