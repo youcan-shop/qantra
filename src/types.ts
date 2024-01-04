@@ -33,6 +33,7 @@ export interface QantraMessagePayloadMap {
   'QANTRA::SESSION_TOKEN.RES': [string]
 
   'QANTRA::NAV.REDIRECT.REMOTE': [string]
+  'QANTRA::NAV.BOUNCE': [string]
 
   'QANTRA::RESOURCE_PICKER.REQ': [ResourcePickerType]
   'QANTRA::RESOURCE_PICKER.RES': [Resource[]]

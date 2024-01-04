@@ -13,6 +13,10 @@ export function redirect(url: string): void {
   dispatch('QANTRA::NAV.REDIRECT.REMOTE', url);
 }
 
+export function bounce(url: string): void {
+  dispatch('QANTRA::NAV.BOUNCE', url);
+}
+
 export function resourcePicker({
   type,
 }: ResourcePickerOptions): Promise<Resource[]> {
