@@ -3,6 +3,7 @@
 YouCan Qantra is a TypeScript library that helps you embed your application inside of the YouCan Seller Area. The following documentation will guide you through the initial setup process.
 
 > [!Note]
+>
 > Qantra components do not render within the app's component hierarchy; instead, they encapsulate TypeScript messages responsible for communication with the Seller Area. The UI rendering is handled by the Seller Area.
 
 ## YouCan UI
