@@ -1,19 +1,19 @@
 # YouCan Qantra
 
-YouCan Qantra is a TypeScript library that helps you embed your app directly inside YouCan. YouCan Qantra works with apps embedded in YouCan Seller Area. The documentation below will help you get started.
+YouCan Qantra is a TypeScript library that helps you embed your application inside of the YouCan Seller Area. The following documentation will guide you through the initial setup process.
 
-> [Note]
-> Qantra components don't render as part of the app's component hierarchy. They are around TypeScript messages that communicate with the Seller Area. The Seller Area does the UI rendering.
+> [!Note]
+> Qantra components do not render within the app's component hierarchy; instead, they encapsulate TypeScript messages responsible for communication with the Seller Area. The UI rendering is handled by the Seller Area.
 
 ## YouCan UI
 
-Inside the app surface, we encourage you to use YouCan UI to create familiar and consistent user experiences between your app and the Seller Area. Your app should import the YouCan UI Vue library, which defines the components for the Seller Area. You can refer to the [documentation](https://developer.youcan.shop/youcan-ui/) to learn more about the UI library
+When working on your app, it's a good idea to use YouCan UI. This helps ensure a consistent look and feel between your app and the Seller Area. Just import the YouCan UI Vue library into your app – it has all the components designed for the Seller Area. Check out the [documentation](https://developer.youcan.shop/youcan-ui/) to learn more about how to use the UI library.
 
 ## Reference
 
 ### Session Token
 
-The Session Token API asynchronously retrieves your app's authentication token from YouCan.
+The Session Token API asynchronously retrieves your app's authentication token.
 
 #### Example
 
@@ -23,7 +23,7 @@ const token = await qantra.sessionToken();
 
 ### Redirection
 
-The redirection API allows you navigate within your app
+The redirection API allows you navigate within your app.
 
 #### Parameters
 
@@ -32,10 +32,22 @@ The redirection API allows you navigate within your app
 #### Example
 
 ```ts
-qantra.redirect('/admin/customers');
+qantra.redirect('/export');
 ```
 
 ### Bounce
+
+The bounce API allows you navigate within the seller area's pages.
+
+#### Parameters
+
+- `(url: string) => void`
+
+#### Example
+
+```ts
+qantra.bounce('/admin/customers');
+```
 
 ### ResourcePicker
 
@@ -55,11 +67,11 @@ const selected = await qantra.resourcePicker({ type: 'product' });
 
 ### Toast
 
-The Toast API displays a non-disruptive message that appears at one of the four edges of the screen of the interface to provide quick and short feedback on the outcome of an action
+The Toast API displays a non-disruptive message that appears in one of the four edges of the screen of the interface to provide quick and short feedback on the outcome of an action
 
 #### Show method
 
-The Toast.show method displays a Toast notification in the Shopify admin. It accepts a variety of options to customize the behavior.
+The `toast.show` method is used to show a notification (Toast) in the Seller Area. You can customize its behavior by providing different options.
 
 ```ts
 qantra.toast.show({
