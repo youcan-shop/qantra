@@ -106,6 +106,6 @@ qantra.toast.show({
 
 ---
 
-If you have a bug report or feature request, please open an issue in this repo.
+For bug reports and feature requests, please open an issue in this repo.
 
 ![YouCan](/assets/banner.jpg)
