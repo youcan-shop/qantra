@@ -102,6 +102,8 @@ qantra.toast.show({
 });
 ```
 
+<img src="assets/toast.jpg" width="300" />
+
 ---
 
 If you have a bug report or feature request, please open an issue in this repo.
