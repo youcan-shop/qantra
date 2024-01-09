@@ -1,4 +1,4 @@
-export type ResourcePickerType = 'product' | 'variant' | 'collection';
+export type ResourcePickerType = 'product' | 'collection';
 export interface ResourcePickerOptions {
   type: ResourcePickerType
 }
