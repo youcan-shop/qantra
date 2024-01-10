@@ -4,7 +4,7 @@ YouCan Qantra is a TypeScript library that helps you embed your application insi
 
 ## Documentation
 
-Visit <https://developer.youcan.shop/apps/qantra/overview.html> to view the documentation.
+Visit [developer.youcan.shop](https://developer.youcan.shop/apps/qantra/overview.html) to view the documentation.
 
 ## License
 
